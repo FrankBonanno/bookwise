@@ -2,12 +2,14 @@ import BookList from '@/components/BookList';
 import BookOverview from '@/components/BookOverview';
 import { sampleBooks } from '@/constants';
 
-const HomePage = () => (
-	<>
-		<BookOverview {...sampleBooks[0]} />
+const HomePage = async () => {
+	return (
+		<>
+			<BookOverview {...sampleBooks[0]} />
 
-		<BookList title="Latest Books" books={sampleBooks} containerClassName="mt-28" />
-	</>
-);
+			<BookList title="Latest Books" books={sampleBooks} containerClassName="mt-28" />
+		</>
+	);
+};
 
 export default HomePage;
